@@ -79,7 +79,7 @@ numbersCloseEnoughToEqual(a, b) // true
 ```
 
 
-### 特殊数值
+### 4. 特殊数值
 
 #### NaN
 
@@ -132,3 +132,22 @@ Object.is(a, NaN) // true
 Object.is(b, 0) // false
 Object.is(b, -0) // true
 ```
+
+### 5. 值和引用
+
+``` javascript
+function foo(x) {
+  x.push(4)
+  x // [1, 2, 3, 4]
+  
+  x = [4, 5, 6]
+  x.push(7)
+  x // [4, 5, 6, 7]
+}
+
+var a = [1, 2, 3]
+foo(a)
+a // [1, 2, 3, 4]
+```
+
+一开始是引用传递，后来对x重新赋值改变了x的指向。
