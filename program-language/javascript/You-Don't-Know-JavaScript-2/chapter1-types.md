@@ -1,3 +1,5 @@
+## 第1章 类型
+
 ### 1. 内置类型
 基本数据类型：null、undefined、boolean、number、string、object、symbol
 
